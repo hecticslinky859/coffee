@@ -1,0 +1,61 @@
+<html>
+<header>
+    
+    <style>
+    body {
+        background-color: white;
+        text-align: center;
+    }
+    ul {
+        background-color: red;
+        border: 3px solid black;
+        color: black;
+        width: 85%;
+        padding: 10;
+        font-size: 20;
+        flex-direction: row;
+        display: flex;
+        text-align: center;
+    }
+
+    </style>
+    
+    </header>
+<body>
+    <h1> Weekly wage </h1>
+    <ul></ul>
+    <h4>total number of days worked:</h4>
+    <p id = "dayCount"></p>
+    <p> 7 </p>
+    
+    <h4>money raised:</h4>
+    <p id = "moneyEarned"></p>
+    
+    <h4> daily average:</h4>
+    <p id = "dayAverage"></p>
+    
+<script>
+let days =[1,2,3,4,5,6,7]
+const $wageLIs = days
+.map((count,i)=>`<ul> day ${i +1}: ${count} </ul>`)
+.join('')
+document.querySelector('ul').innerHTML = $wageLIs
+    
+let = sumdaily = 0 
+    sumdaily = days.reduce((a,b)=> a+b, 0)
+    let dayCount = 7
+    
+    const $sumdaily  = document.querySelector("#dayCount")
+    $sumdaily.innerHTML = sumdaily
+    
+    let wage = 50
+    let wwage = 0
+    wwage = dayCount * wage   
+    const $wwage = document.querySelector("#moneyEarned")
+    $wwage.innerHTML = wwage
+    
+</script>
+    
+    </body>
+
+</html>
